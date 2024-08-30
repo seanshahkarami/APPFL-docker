@@ -1,7 +1,7 @@
 FROM python:3.12
 
 # I'm splitting the dependencies and APPFL installation as MPI support was much more involved and time consuming to include.
-# Since my main priority are gRPC deployments, I extracted just the dependencies required for that.
+# Since my main priority is gRPC deployments, I extracted just the dependencies required for that.
 
 # Install APPFL dependencies required for gRPC deployments.
 RUN pip install --no-cache-dir \
