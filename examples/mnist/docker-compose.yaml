@@ -1,0 +1,21 @@
+services:
+  server:
+    image: seanshahkarami/appfl
+    volumes:
+      - ./server:/work
+    working_dir: /work
+    command: [ "python3", "/APPFL/examples/grpc/run_server.py", "--config", "/work/config.yaml" ]
+
+  client1:
+    image: seanshahkarami/appfl
+    volumes:
+      - ./client1:/work
+    working_dir: /work
+    command: [ "python3", "/APPFL/examples/grpc/run_client.py", "--config", "/work/config.yaml" ]
+
+  client2:
+    image: seanshahkarami/appfl
+    volumes:
+      - ./client2:/work
+    working_dir: /work
+    command: [ "python3", "/APPFL/examples/grpc/run_client.py", "--config", "/work/config.yaml" ]
